@@ -30,3 +30,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/article','ArticleController')->middleware('auth');
 Route::get('/show-articles', 'ArticleController@show_article')->middleware('auth');
 Route::get('/profile/{name}', 'ArticleController@profile')->middleware('auth');
+
+//PhoneController route here.......
+Route::get('/numbers', 'ArticleController@numbers')->name('numbers');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\User;
+use App\Phone;
 use Auth;
 use Illuminate\Http\Request;
 
@@ -109,5 +110,10 @@ class ArticleController extends Controller
     {   
         $name = User::where('name', $name)->first();
         return view('profile')->with('name', $name);
+    }
+
+    public function numbers(){
+        $users = User::all();
+        return view('numbers')->with('users', $users);
     }
 }

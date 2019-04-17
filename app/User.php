@@ -2,6 +2,7 @@
 
 namespace App;
 use App\Article;
+use App\Phone;
 use App\Address;
 use App\Role;
 use App\RoleUser;
@@ -48,7 +49,11 @@ class User extends Authenticatable
         return $this->hasOne(Address::class);
     }
 
-    public function roles(){
-        return $this->belongsToMany(Role::class);
+    // public function roles(){
+    //     return $this->belongsToMany(Role::class);
+    // }
+
+    public function phone(){
+        return $this->hasOne(Phone::class);
     }
 }

@@ -6,15 +6,6 @@
 			<div class="card">
 				<div class="card-header">{{$name->name}}'s' Profile</div>
 				<p><strong>Address: </strong> {{$name->addresses->country}}</p>
-				
-				<p>
-					<strong>Role: </strong>
-					<ul>
-						@foreach($name->roles as $role)
-				 			<li>{{$role->name}}</li>
-						@endforeach
-					</ul>
-				</p>
 
 				@foreach($name->articles as $article)
 					<div class="row">
